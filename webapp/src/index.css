@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom cursor */
+* {
+  cursor: none;
+}
+
+.custom-cursor {
+  width: 24px;
+  height: 24px;
+  color: #ffffff;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
+  transition: all 0.15s ease-out;
+}
+
+/* Dreamy background */
+.dreamy-background {
+  background: linear-gradient(135deg, #1a237e 0%, #000000 100%);
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+}
+
+/* Floating notes animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+  }
+  25% {
+    transform: translateY(-15px) translateX(5px);
+  }
+  75% {
+    transform: translateY(15px) translateX(-5px);
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.musical-notes {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.note {
+  position: absolute;
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.5);
+  pointer-events: none;
+  user-select: none;
+}
+
+.note:nth-child(3n) {
+  animation: float 3s ease-in-out infinite;
+}
+
+.note:nth-child(3n + 1) {
+  animation: float 5s ease-in-out infinite;
+}
+
+.note:nth-child(3n + 2) {
+  animation: float 7s ease-in-out infinite;
+}
