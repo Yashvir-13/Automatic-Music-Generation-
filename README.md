@@ -49,5 +49,31 @@ We trained two models:
 
 ---
 
-## 📂 Folder Structure
+## 🛠️ Installation
 
+```bash
+git clone https://github.com/Yashvir-13/Automatic-Music-Generation-.git
+cd Automatic-Music-Generation-
+pip install -r requirements.txt
+```
+
+---
+
+## ▶️ Run the Notebook
+Open and run amg.ipynb to train models, generate MIDI files, and visualize results.
+
+---
+
+## 📈 Future Enhancements
+
+- Add chord conditioning.
+- Integrate Transformer-based models.
+- Real-time generation via MIDI input.
+ 
+---
+##  Author
+
+### Yashvir Singh
+
+#### Loves time, tech, and the timeless beauty of music.
+---
